@@ -1,0 +1,132 @@
+
+a.text {
+	text-decoration: none;
+	color: black;
+}
+a.text:active {
+	color: black;
+}
+a.text:visited {
+	color: black;
+}
+
+header {
+	position: relative;
+	height: 210px;
+	background-image: url(../images/backgrounds/back_rainbow_hd1500x500.jpg);
+	background-size: auto 100%;
+	font-family: 'Comfortaa', cursive;
+}
+header #call {
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Корзина */
+
+header .basket {
+	position: absolute;
+	bottom: 0;
+	right: 30px;
+}
+#basket_icon {
+	float: left;
+}
+#basket_count, #basket_count_price {
+	margin-left: 90px;
+	font-size: medium;
+	line-height: 0.9;
+}
+#basket_count {
+	margin-top: 10px;
+}
+
+.auth {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: -7px;
+	margin-right: 30px;
+}
+.auth li{
+	display: inline-block;
+}
+
+/*Панель навигации*/
+
+
+nav ul {
+	margin-top: 15px;
+	padding: 0px;
+	list-style: none;
+	font-family: 'Comfortaa', cursive;
+	font-size: x-large;
+	text-align: center;
+}
+nav li {
+	position: relative;
+	display: inline-block;
+	color: #333;
+	background-color: #f4f4f4;
+	width: 7em;
+	text-align: center;
+	margin-right: -9px;
+	transition-duration: 0.5s;
+}
+nav li:hover {
+	cursor: pointer;
+	background-color: #333;
+	color: #f4f4f4;
+}
+.submenu li {
+	display: block;
+	transition-duration: 0.5s;
+}
+nav li a {
+	display: inline-block;
+	width: 7em;
+	margin-right: -9px;
+	margin-left: -9px;
+	padding: 7px;
+	color: #333;
+	text-decoration: none;
+	text-align: center;
+}
+nav li a:hover {
+	color: #f4f4f4;
+}
+
+nav .submenu {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	transition: all 0.5s ease;
+	margin-top: 0px;
+	left: 0;
+	display: none;
+	clear: both;
+	width: 100%;
+	font-size: 1.4rem;
+}
+
+nav ul li:hover ul,
+ul li:focus-within > ul,
+nav .submenu:hover {
+	visibility: visible;
+	opacity: 1;
+	display: block;
+	
+}
+
+
+
+@media (min-width: 300px) and (max-width: 1000px) {
+	header { height: 170px; }
+}
+@media (min-width: 1700px) {
+	header { height: 23vh; max-height: 210px; }
+}
+@media (min-width: 1000px) and (max-width: 1700px) {
+	header { height: 20vh; max-height: 210px; }
+}
